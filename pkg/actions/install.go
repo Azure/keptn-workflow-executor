@@ -79,7 +79,7 @@ func pollStatus(ctx context.Context, keptnCli *keptn.Keptn, keptnCtx, project, s
 	statusPoller := func(done chan<- bool) {
 		start := time.Now()
 		defer func() {
-			fmt.Printf("polling status finished execution in %v\n", time.Now().Sub(start))
+			fmt.Printf("polling status finished execution in %v\n", time.Since(start))
 		}()
 
 		// fmt.Printf("Looking up event with keptnCtx : %s\n", keptnCtx)

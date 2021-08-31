@@ -166,7 +166,7 @@ func (k *Keptn) ConfigureMonitoring(project, service, monitoringType string) err
 	sdkEvent.SetType(keptnlib.ConfigureMonitoringEventType)
 	sdkEvent.SetSource(source.String())
 	sdkEvent.SetDataContentType(cloudevents.ApplicationJSON)
-	sdkEvent.SetData(cloudevents.ApplicationJSON, configureMonitoringEventData)
+	_ = sdkEvent.SetData(cloudevents.ApplicationJSON, configureMonitoringEventData)
 
 	eventByte, err := json.Marshal(sdkEvent)
 	if err != nil {
