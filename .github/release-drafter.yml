@@ -1,0 +1,17 @@
+name-template: 'v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+template: 
+  ## Changes
+
+  $CHANGES
+categories:
+  - title: '🚀 Features'
+    labels:
+      - 'feat'
+      - 'enhancement'
+  - title: '🐛 Bug Fixes'
+    labels:
+      - 'fix'
+      - 'bug'
+  - title: '🧰 Maintenance'
+    label: 'chore'
